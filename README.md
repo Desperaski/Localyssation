@@ -1,4 +1,4 @@
-# Localyssation
+# Localyssation-NumAni
 
 [![Version](https://thunderstore-badges.foreverjlong.workers.dev/Jeneration_Technology/LocalyssationJP/version)](https://thunderstore.io/c/atlyss/p/Jeneration_Technology/LocalyssationJP/)
 [![Downloads](https://thunderstore-badges.foreverjlong.workers.dev/Jeneration_Technology/LocalyssationJP/downloads)](https://thunderstore.io/c/atlyss/p/Jeneration_Technology/LocalyssationJP/)
@@ -7,8 +7,8 @@ A work-in-progress localization library mod for [ATLYSS](https://store.steampowe
 
 ## Requirements
 
-- BepInEx 5.4
-- EasySettings 1.1.8+
+- [BepInEx](https://thunderstore.io/c/atlyss/p/BepInEx/BepInExPack/) 5.4
+- [EasySettings](https://thunderstore.io/c/atlyss/p/Nessie/EasySettings/) 1.1.8+
 - **UNINSTALL** BepInEx Fixer
   - Outdated. May install via mod dependencies when using mod manager (r2modman) but is unnecessary for latest ATLYSS mods and can cause issues.
 
@@ -24,13 +24,13 @@ Currently listed translation patch(es):
 | 繁體中文 |  [jasonpepe](https://thunderstore.io/c/atlyss/p/jasonpepe/)  | [LocalyssationZHTW](https://thunderstore.io/c/atlyss/p/jasonpepe/LocalyssationZHTW) |
 | Español  |    [Alhenix](https://thunderstore.io/c/atlyss/p/Alhenix/)    | [LocalyssationESLA](https://thunderstore.io/c/atlyss/p/Alhenix/localyssationESLA/) |
 |  한국어  | [KR_Kemonoz](https://thunderstore.io/c/atlyss/p/KR_Kemonoz/) | [AtlyssKr](https://thunderstore.io/c/atlyss/p/KR_Kemonoz/AtlyssKr/) |
-|Brasileiro|[Guachenim](https://thunderstore.io/c/atlyss/p/Guachenim/)|[Thunder Store](https://thunderstore.io/c/atlyss/p/Guachenim/Ordem_e_Atlyss_a_Braziliant_PTBR_Translation/)|
+| Brasileiro |[Guachenim](https://thunderstore.io/c/atlyss/p/Guachenim/)|[Thunder Store](https://thunderstore.io/c/atlyss/p/Guachenim/Ordem_e_Atlyss_a_Braziliant_PTBR_Translation/)|
 | 日本語 | [gatia](https://gatia.kage-tora.com/index.html) | [すみっこモノづくり](https://gatia.kage-tora.com/atlyss_jp.html) |
 
 ## How to use
 
-1. Install BepInEx.
-2. Install EasySettings and Localyssation.
+1. Install [BepInEx](https://thunderstore.io/c/atlyss/p/BepInEx/BepInExPack/).
+2. Install [EasySettings](https://thunderstore.io/c/atlyss/p/Nessie/EasySettings/) and Localyssation.
 3. Put a translation patch inside the `plugins` folder. 
 
 ## Current features
@@ -51,7 +51,7 @@ Currently listed translation patch(es):
     * `ScriptableQuest.md`: givers, translation keys, types, subtypes, and names
   * Option to show KEY of empty translations in game.
   * Reload strings with hot key in game.
-  * Diff tool is availabile that shows the difference between two string.yml files.
+  * [Diff tool](https://github.com/numanicloud/Localyssation/releases/tag/v2.4.0-12026.a3) is availabile that shows the difference between two string.yml files.
 
 ## Report a bug / missing translation
 
