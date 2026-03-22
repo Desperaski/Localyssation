@@ -5,6 +5,8 @@
 
 A work-in-progress localization library mod for [ATLYSS](https://store.steampowered.com/app/2768430/ATLYSS/). Check [Github page](https://github.com/numanicloud/Localyssation) for newest update.
 
+[日本語のREADMEはこちら](README_Jp.md)
+
 ## Requirements
 
 - [BepInEx](https://thunderstore.io/c/atlyss/p/BepInEx/BepInExPack/) 5.4
