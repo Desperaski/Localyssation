@@ -97,6 +97,12 @@ namespace Localyssation
                     ShowTranslation = !ShowTranslation;
                     CallOnLanguageChanged(LanguageManager.CurrentLanguage);
                 }
+
+                if (Input.GetKeyDown(LocalyssationConfig.ShowTranslationKey))
+                {
+                    LocalyssationConfig.ShowTranslationKeyEnabled = !LocalyssationConfig.ShowTranslationKeyEnabled;
+                    CallOnLanguageChanged(LanguageManager.CurrentLanguage);
+                }
             }
         }
 #pragma warning restore IDE0051
@@ -242,7 +248,7 @@ namespace Localyssation
 
         public static string GetString(string key, string defaultValue = GET_STRING_DEFAULT_VALUE_ARG_UNSPECIFIED, int fontSize = -1)
         {
-            if (LocalyssationConfig.ShowTranslationKey)
+            if (LocalyssationConfig.ShowTranslationKeyEnabled)
             {
                 return key;
             }
@@ -251,7 +257,7 @@ namespace Localyssation
 
         public static string GetString(TranslationKey translationKey, string defaultValue = GET_STRING_DEFAULT_VALUE_ARG_UNSPECIFIED, int fontSize = -1)
         {
-            if (LocalyssationConfig.ShowTranslationKey)
+            if (LocalyssationConfig.ShowTranslationKeyEnabled)
             {
                 return translationKey.ToString();
             }

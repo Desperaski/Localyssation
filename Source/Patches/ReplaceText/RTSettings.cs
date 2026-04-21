@@ -19,20 +19,15 @@ namespace Localyssation.Patches.ReplaceText
                 //{ "Button_videoTab", "SETTINGS_TAB_BUTTON_VIDEO" },
                 { "Button_videoTab", I18nKeys.Settings.BUTTON_VIDEO },
 
-                { "_header_GameEffectSettings", I18nKeys.Settings.Video.HEADER_GAME_EFFECT_SETTINGS },
-                //{ "_cell_proportionsToggle", I18nKeys.Settings.Video.CELL_PROPORTIONS_TOGGLE },
-                { "_cell_jiggleBonesToggle", I18nKeys.Settings.Video.CELL_JIGGLE_BONES_TOGGLE },
-                { "_cell_clearUnderclothesToggle", I18nKeys.Settings.Video.CELL_CLEAR_UNDERCLOTHES_TOGGLE },
+                { "_header_displaySettings", I18nKeys.Settings.Video.HEADER_VIDEO_SETTINGS },
                 { "_cell_screenMode", I18nKeys.Settings.Video.CELL_SCREEN_MODE },
-
-                { "_header_videoSettings", I18nKeys.Settings.Video.HEADER_VIDEO_SETTINGS },
-                //{ "_cell_fullscreenToggle", I18nKeys.Settings.Video.CELL_FULLSCREEN_TOGGLE },
+                { "_cell_screenResolution", I18nKeys.Settings.Video.CELL_SCREEN_RESOLUTION },
                 { "_cell_verticalSync", I18nKeys.Settings.Video.CELL_VERTICAL_SYNC },
                 { "_cell_anisotropicFiltering", I18nKeys.Settings.Video.CELL_ANISOTROPIC_FILTERING },
-                { "_cell_screenResolution", I18nKeys.Settings.Video.CELL_SCREEN_RESOLUTION },
                 { "_cell_antiAliasing", I18nKeys.Settings.Video.CELL_ANTI_ALIASING },
-                { "_cell_textureFiltering", I18nKeys.Settings.Video.CELL_TEXTURE_FILTERING },
                 { "_cell_textureQuality", I18nKeys.Settings.Video.CELL_TEXTURE_QUALITY },
+                { "_cell_textureFiltering", I18nKeys.Settings.Video.CELL_TEXTURE_FILTERING },
+                //{ "_cell_fullscreenToggle", I18nKeys.Settings.Video.CELL_FULLSCREEN_TOGGLE },
 
                 { "_header_CameraSettings", I18nKeys.Settings.Video.HEADER_CAMERA_SETTINGS },
                 { "_cell_fieldOfView", I18nKeys.Settings.Video.CELL_FIELD_OF_VIEW },
@@ -41,16 +36,23 @@ namespace Localyssation.Patches.ReplaceText
                 { "_cell_cameraVert", I18nKeys.Settings.Video.CELL_CAMERA_VERT },
                 { "_cell_cameraRenderDistance", I18nKeys.Settings.Video.CELL_CAMERA_RENDER_DISTANCE },
 
+
+
                 { "_header_cursorSettings", I18nKeys.Settings.Video.HEADER_CURSOR_SETTINGS },
                 { "_cell_setCursor", I18nKeys.Settings.Video.CELL_CURSOR_GRAPHIC },
                 { "_cell_useHardwareCursor", I18nKeys.Settings.Video.CELL_HARDWARE_CURSOR },
 
+                { "_header_accessibilitySettings", I18nKeys.Settings.Video.HEADER_ACCESSIBILITY_SETTINGS },
+                { "_cell_jiggleBonesToggle", I18nKeys.Settings.Video.CELL_JIGGLE_BONES_TOGGLE },
+                { "_cell_clearUnderclothesToggle", I18nKeys.Settings.Video.CELL_CLEAR_UNDERCLOTHES_TOGGLE },
+                { "_cell_weaponGlow", I18nKeys.Settings.Video.CELL_WEAPON_GLOW },
+                { "_cell_disableGibs", I18nKeys.Settings.Video.CELL_DISABLE_GIB_EFFECT },
+                { "_cell_cameraShake", I18nKeys.Settings.Video.CELL_CAMERA_SHAKE },
+                //{ "_cell_proportionsToggle", I18nKeys.Settings.Video.CELL_PROPORTIONS_TOGGLE },
+
                 { "_header_PostProcessing", I18nKeys.Settings.Video.HEADER_POST_PROCESSING },
                 { "_cell_cameraBitcrushShader", I18nKeys.Settings.Video.CELL_CAMERA_BITCRUSH_SHADER },
                 { "_cell_cameraWaterEffect", I18nKeys.Settings.Video.CELL_CAMERA_WATER_EFFECT },
-                { "_cell_cameraShake", I18nKeys.Settings.Video.CELL_CAMERA_SHAKE },
-                { "_cell_weaponGlow", I18nKeys.Settings.Video.CELL_WEAPON_GLOW },
-                { "_cell_disableGibs", I18nKeys.Settings.Video.CELL_DISABLE_GIB_EFFECT },
 
 
                 { "Button_audioTab", I18nKeys.Settings.BUTTON_AUDIO },
@@ -68,15 +70,15 @@ namespace Localyssation.Patches.ReplaceText
                 { "_cell_voiceVolume", I18nKeys.Settings.Audio.CELL_VOICE_VOLUME },
 
 
-                { "Button_inputTab", I18nKeys.Settings.BUTTON_INPUT },
+                { "Button_controlTab", I18nKeys.Settings.BUTTON_INPUT },
 
-                { "Image_05", I18nKeys.Settings.Input.HEADER_INPUT_SETTINGS },
+                { "_header_inputSettings", I18nKeys.Settings.Input.HEADER_INPUT_SETTINGS },
                 { "_cell_axisType", I18nKeys.Settings.Input.CELL_AXIS_TYPE },
                 { "Image_06", I18nKeys.Settings.Input.GAME_PAD_WIP },
                 { "Image_07", I18nKeys.Settings.Input.CELL_RESET_BINDINGS },
                 { "InputDefaults_button", I18nKeys.Settings.Input.CELL_RESET_BINDINGS },
 
-                { "Image_08", I18nKeys.Settings.Input.HEADER_CAMERA_CONTROL },
+                { "_header_cameraControl", I18nKeys.Settings.Input.HEADER_CAMERA_CONTROL },
                 { "_cell_cameraSensitivity", I18nKeys.Settings.Input.CELL_CAMERA_SENSITIVITY },
                 { "_cell_invertXCameraAxis", I18nKeys.Settings.Input.CELL_INVERT_X_CAMERA_AXIS },
                 { "_cell_invertYCameraAxis", I18nKeys.Settings.Input.CELL_INVERT_Y_CAMERA_AXIS },
@@ -89,11 +91,13 @@ namespace Localyssation.Patches.ReplaceText
                 { "_cell_keybinding_right", I18nKeys.Settings.Input.CELL_KEYBINDING_RIGHT },
                 { "_cell_keybinding_jump", I18nKeys.Settings.Input.CELL_KEYBINDING_JUMP },
                 { "_cell_keybinding_dash", I18nKeys.Settings.Input.CELL_KEYBINDING_DASH },
+                { "_cell_analogDirectionMode", I18nKeys.Settings.Input.CELL_ANALOG_DIRECTION_MODE },
 
                 { "Header_Strafing", I18nKeys.Settings.Input.HEADER_STRAFING },
                 { "_cell_keybinding_lockDirection", I18nKeys.Settings.Input.CELL_KEYBINDING_LOCK_DIRECTION },
                 { "_cell_strafeMode", I18nKeys.Settings.Input.CELL_KEYBINDING_STRAFE_MODE },
                 { "_cell_strafeWeapon", I18nKeys.Settings.Input.CELL_KEYBINDING_STRAFE_WEAPON },
+                { "_cell_strafeWeaponMoveAttack", I18nKeys.Settings.Input.CELL_STRAFE_WEAPON_MOVE_ATTACK },
                 { "_cell_strafeCasting", I18nKeys.Settings.Input.CELL_KEYBINDING_STRAFE_CASTING },
 
                 { "Header_Action", I18nKeys.Settings.Input.HEADER_ACTION },
@@ -132,11 +136,15 @@ namespace Localyssation.Patches.ReplaceText
                 { "_cell_keybinding_whoTab", I18nKeys.Settings.Input.CELL_KEYBINDING_WHO_TAB },
                 { "_cell_keybinding_hideUI", I18nKeys.Settings.Input.CELL_KEYBINDING_HIDE_UI },
 
+                { "_header_resetBindings", I18nKeys.Settings.Input.HEADER_RESET_BINDINGS },
+
 
                 { "Button_gameTab", I18nKeys.Settings.BUTTON_NETWORK },
 
                 { "_header_gameSettings", I18nKeys.Settings.Network.HEADER_GAME_SETTINGS },
                 { "_cell_enablePvPOnMapEnter", I18nKeys.Settings.Network.CELL_ENABLE_PVP_ON_MAP_ENTER },
+                { "_cell_persistDisconnectHotkey", I18nKeys.Settings.Network.CELL_PERSIST_DISCONNECT_HOTKEY },
+                { "_cell_enableUnicode", I18nKeys.Settings.Network.CELL_ENABLE_UNICODE },
 
                 { "_header_nametagSettings", I18nKeys.Settings.Network.HEADER_NAMETAG_SETTINGS },
                 { "_cell_displayGlobalNicknameTags", I18nKeys.Settings.Network.CELL_DISPLAY_GLOBAL_NICKNAME_TAGS },
@@ -153,6 +161,9 @@ namespace Localyssation.Patches.ReplaceText
                 { "_cell_hideQuestTracker", I18nKeys.Settings.Network.CELL_HIDE_QUEST_TRACKER },
                 { "_cell_hideMinimap", I18nKeys.Settings.Network.CELL_HIDE_MINIMAP },
                 { "_cell_hideDamageIcons", I18nKeys.Settings.Network.CELL_HIDE_DAMAGE_VALUE_NUMBER_ICONS },
+                { "_cell_hidePeerCounter", I18nKeys.Settings.Network.CELL_HIDE_PEER_COUNTER },
+                { "_cell_hideNpcHeadIcons", I18nKeys.Settings.Network.CELL_HIDE_NPC_HEAD_ICONS },
+                { "_cell_displaySkillSlotCooldownCounters", I18nKeys.Settings.Network.CELL_DISPLAY_SKILL_SLOT_COOLDOWN_COUNTERS },
 
                 { "_header_chatboxSettings", I18nKeys.Settings.Network.HEADER_CHATBOX_SETTINGS },
                 { "_cell_defaultChatRoom", I18nKeys.Settings.Network.CELL_DEFAULT_CHANNEL},
@@ -193,11 +204,14 @@ namespace Localyssation.Patches.ReplaceText
 
             RTUtil.RemapChildTextsByPath(__instance.transform, new Dictionary<string, string>()
             {
-                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoSettings/Scroll View/Viewport/Content/_cell_fieldOfView/Button/Text", "SETTINGS_BUTTON_RESET" },
-                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoSettings/Scroll View/Viewport/Content/_cell_cameraSmoothing/Button_01/Text", "SETTINGS_BUTTON_RESET" },
-                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoSettings/Scroll View/Viewport/Content/_cell_cameraHoriz/Button_01/Text", "SETTINGS_BUTTON_RESET" },
-                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoSettings/Scroll View/Viewport/Content/_cell_cameraVert/Button_01/Text", "SETTINGS_BUTTON_RESET" },
-                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_inputSettingsTab/_backdrop/Scroll View/Viewport/Content/_cell_cameraSensitivity/Button_01/Text", "SETTINGS_BUTTON_RESET" },
+                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/_cell_fieldOfView/Button/Text", "SETTINGS_BUTTON_RESET" },
+                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/_cell_cameraSmoothing/Button_01/Text", "SETTINGS_BUTTON_RESET" },
+                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/_cell_cameraHoriz/_button_resetCameraHoriz/Text", "SETTINGS_BUTTON_RESET" },
+                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/_cell_cameraVert/_button_resetCameraVert/Text", "SETTINGS_BUTTON_RESET" },
+                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_inputSettingsTab/_backdrop/Scroll View_inputTab/Viewport_inputTab/Content_inputTab/_cell_cameraSensitivity/_button_resetCameraSensitivity/Text", "SETTINGS_BUTTON_RESET" },
+
+                // TODO: "General" header only translates after F10 (Reload Language). idk how to fix this
+                { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab(Clone)/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/EasySettings TabSelector(Clone)/Label", "SETTINGS_MOD_HEADER_GENERAL" },
             });
         }
 

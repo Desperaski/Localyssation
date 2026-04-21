@@ -47,6 +47,8 @@ namespace Localyssation
                     = Create("SETTINGS_INPUT_CELL_KEYBINDING_JUMP", "Jump");
                 public static readonly string CELL_KEYBINDING_DASH
                     = Create("SETTINGS_INPUT_CELL_KEYBINDING_DASH", "Dash");
+                public static readonly string CELL_ANALOG_DIRECTION_MODE
+                    = Create("SETTINGS_INPUT_CELL_ANALOG_DIRECTION_MODE", "Detect Analog Stick");
 
                 public static readonly string HEADER_STRAFING
                     = Create("SETTINGS_INPUT_HEADER_STRAFING", "Strafing");
@@ -60,6 +62,8 @@ namespace Localyssation
                     = Create("SETTINGS_INPUT_CELL_KEYBINDING_STRAFE_MODE_OPTION_2", "Toggle Strafe Key");
                 public static readonly string CELL_KEYBINDING_STRAFE_WEAPON
                     = Create("SETTINGS_INPUT_CELL_KEYBINDING_STRAFE_WEAPON", "Strafe While Holding Weapon");
+                public static readonly string CELL_STRAFE_WEAPON_MOVE_ATTACK
+                    = Create("SETTINGS_INPUT_CELL_STRAFE_WEAPON_MOVE_ATTACK", "Strafe While Attacking + Movement");
                 public static readonly string CELL_KEYBINDING_STRAFE_CASTING
                     = Create("SETTINGS_INPUT_CELL_KEYBINDING_STRAFE_CASTING", "Strafe While Casting Offensive Skills");
 
@@ -132,6 +136,8 @@ namespace Localyssation
                 public static readonly string CELL_KEYBINDING_HIDE_UI
                     = Create("SETTINGS_INPUT_CELL_KEYBINDING_HIDE_UI", "Hide Game UI");
 
+                public static readonly string HEADER_RESET_BINDINGS
+                    = Create("SETTINGS_INPUT_HEADER_RESET_BINDINGS", "Reset Bindings");
                 public static readonly string CELL_RESET_BINDINGS
                     = Create("SETTINGS_INPUT_CELL_RESET_BINDINGS", "Reset Bindings");
             }

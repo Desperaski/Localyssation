@@ -12,6 +12,10 @@ namespace Localyssation
                     = Create("SETTINGS_NETWORK_HEADER_GAME_SETTINGS", "Game Settings");
                 public static readonly string CELL_ENABLE_PVP_ON_MAP_ENTER
                     = Create("SETTINGS_NETWORK_CELL_ENABLE_PVP_ON_MAP_ENTER", "Flag for PvP when available");
+                public static readonly string CELL_PERSIST_DISCONNECT_HOTKEY
+                    = Create("SETTINGS_NETWORK_CELL_PERSIST_DISCONNECT_HOTKEY", "Persist (Ctrl + F12) disconnect hotkey in-game");
+                public static readonly string CELL_ENABLE_UNICODE
+                    = Create("SETTINGS_NETWORK_CELL_ENABLE_UNICODE", "(Hosting) Allow Unicode");
 
                 public static readonly string HEADER_NAMETAG_SETTINGS
                     = Create("SETTINGS_NETWORK_HEADER_NAMETAG_SETTINGS", "Nametag Settings");
@@ -38,6 +42,12 @@ namespace Localyssation
                     = Create("SETTINGS_NETWORK_CELL_HIDE_MINIMAP", "Hide Minimap");
                 public static readonly string CELL_HIDE_DAMAGE_VALUE_NUMBER_ICONS
                     = Create("SETTINGS_NETWORK_CELL_HIDE_VALUE_NUMBER_ICONS", "Hide Value Number Icons");
+                public static readonly string CELL_HIDE_PEER_COUNTER
+                    = Create("SETTINGS_NETWORK_CELL_HIDE_PEER_COUNTER", "Hide Player Instance Counter");
+                public static readonly string CELL_HIDE_NPC_HEAD_ICONS
+                    = Create("SETTINGS_NETWORK_CELL_HIDE_NPC_HEAD_ICONS", "Hide NPC Head Icons");
+                public static readonly string CELL_DISPLAY_SKILL_SLOT_COOLDOWN_COUNTERS
+                    = Create("SETTINGS_NETWORK_CELL_DISPLAY_SKILL_SLOT_COOLDOWN_COUNTERS", "Display Action Slot Cooldown Counters");
                 //public static readonly string CELL_DISPLAY_CREEP_NAMETAGS
                 //    = Create("SETTINGS_NETWORK_CELL_DISPLAY_CREEP_NAMETAGS", "Display Enemy Nametags");
                 //public static readonly string CELL_HIDE_DUNGEON_MINIMAP

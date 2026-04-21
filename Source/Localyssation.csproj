@@ -65,12 +65,17 @@
 
   <!-- Publicizer for accessing private identifiers in ATLYSS's assembly. -->
   <ItemGroup>
-    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" ExcludeAssets="runtime" />
-    <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3" PrivateAssets="all" ExcludeAssets="runtime">
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="YamlDotNet" Version="17.0.1" />
   </ItemGroup>
 
   <!-- Import all custom targets -->
   <Import Project="tasks.targets" />
+  <PropertyGroup>
+    <NuGetAuditMode>direct</NuGetAuditMode>
+  </PropertyGroup>
 
   <!-- ATLYSS_Data/Managed assemblies. -->
   <ItemGroup>

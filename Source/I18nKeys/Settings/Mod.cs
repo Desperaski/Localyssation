@@ -11,6 +11,11 @@ namespace Localyssation
             public static class Mod
             {
                 internal static void Init() { }
+                private static TranslationKey CreateSectionHeader(string key, string defaultValue = "")
+                {
+                    return I18nKeys.Create($"SETTINGS_MOD_{key}", defaultValue);
+                }
+
                 private static TranslationKey Create(string key, string defaultValue = "")
                 {
                     return I18nKeys.Create($"SETTINGS_MOD_CELL_LOCALYSSATION_{key}", defaultValue);
@@ -21,8 +26,9 @@ namespace Localyssation
                     return Create(KeyUtil.Normalize(configEntry.Key), configEntry.Key);
                 }
 
-
-
+                // TODO: Этот заголовок при заходе в игру отображается непереведённым. Переводится только по нажатию кнопки обновить язык. Хз как это фиксить
+                public static readonly TranslationKey HEADER_GENERAL
+                    = CreateSectionHeader("HEADER_GENERAL", "General");
                 public static readonly TranslationKey LANGUAGE
                     = Create(ConfigDefinitions.Language);
                 public static readonly TranslationKey TRANSLATOR_MODE

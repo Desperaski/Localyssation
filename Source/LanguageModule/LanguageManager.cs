@@ -103,7 +103,7 @@ namespace Localyssation.LanguageModule
 
         public static string GetString(string key, string defaultString = "")
         {
-            if (LocalyssationConfig.ShowTranslationKey)
+            if (LocalyssationConfig.ShowTranslationKeyEnabled)
             {
                 return key;
             }

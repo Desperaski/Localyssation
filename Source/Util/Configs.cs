@@ -43,12 +43,22 @@ namespace Localyssation.Util
 
         internal static ConfigEntry<bool> configTranslatorMode { get; private set; }
         public static bool TranslatorMode { get => configTranslatorMode.Value; }
+
         internal static ConfigEntry<bool> configCreateDefaultLanguageFiles { get; private set; }
         public static bool CreateDefaultLanguageFiles { get => configCreateDefaultLanguageFiles.Value; }
-        internal static ConfigEntry<bool> configShowTranslationKey { get; private set; }
-        public static bool ShowTranslationKey { get => configShowTranslationKey.Value; }
+
+        internal static ConfigEntry<KeyCode> configShowTranslationKey { get; private set; }
+        public static KeyCode ShowTranslationKey { get => configShowTranslationKey.Value; }
+
+        private static bool showTranslationKeyEnabled = false;
+        public static bool ShowTranslationKeyEnabled
+        {
+            get => showTranslationKeyEnabled;
+            set => showTranslationKeyEnabled = value;
+        }
         internal static ConfigEntry<bool> configExportExtra { get; private set; }
         public static bool ExportExtra { get => configExportExtra.Value; }
+
         internal static ConfigEntry<KeyCode> configReloadLanguageKeybind { get; private set; }
         public static KeyCode ReloadLanguageKeybind { get => configReloadLanguageKeybind.Value; }
 
@@ -89,8 +99,8 @@ namespace Localyssation.Util
                 );
             configShowTranslationKey = config.Bind(
                 ConfigDefinitions.ShowTranslationKey,
-                false,
-                new ConfigDescription("Show translation keys instead of translated string for debugging.")
+                KeyCode.F8,
+                new ConfigDescription("Button to toggle showing translation keys instead of translated string for debugging.")
                 );
             configExportExtra = config.Bind(
                 ConfigDefinitions.ExportExtra,
@@ -129,12 +139,12 @@ namespace Localyssation.Util
 
         private AtlyssToggle translatorModeToggle;
 
-        private AtlyssToggle showTranslationKeyToggle;
         private AtlyssToggle createDefaultLanguageFilesToggle;
         private AtlyssToggle exportExtraToggle;
         private AtlyssToggle logVanillaFontsToggle;
 
 
+        private AtlyssKeyButton showTranslationKeybind;
         private AtlyssKeyButton reloadLanguageKeybind;
         private AtlyssKeyButton reloadFontBundlesKeybind;
         private AtlyssKeyButton switchTranslationKeybind;
@@ -183,14 +193,6 @@ namespace Localyssation.Util
 
             void SetupToggles()
             {
-                showTranslationKeyToggle = tab.AddToggle(LocalyssationConfig.configShowTranslationKey);
-                showTranslationKeyToggle.OnValueChanged.AddListener((v) =>
-                {
-                    LanguageManager.ChangeLanguage(LanguageManager.CurrentLanguage, true);    // refresh all
-                });
-                //LangAdjustables.RegisterText(showTranslationKeyToggle.Label, SHOW_TRANSLATION_KEY);
-                RegisterTranslatorModeElement(showTranslationKeyToggle, SHOW_TRANSLATION_KEY);
-
                 createDefaultLanguageFilesToggle = tab.AddToggle(LocalyssationConfig.configCreateDefaultLanguageFiles);
                 //LangAdjustables.RegisterText(createDefaultLanguageFilesToggle.Label, CREATE_DEFAULT_LANGUAGE_FILES);
                 RegisterTranslatorModeElement(createDefaultLanguageFilesToggle, CREATE_DEFAULT_LANGUAGE_FILES);
@@ -205,6 +207,8 @@ namespace Localyssation.Util
 
             void SetupKeybind()
             {
+                showTranslationKeybind = tab.AddKeyButton(LocalyssationConfig.configShowTranslationKey);
+                RegisterTranslatorModeElement(showTranslationKeybind, SHOW_TRANSLATION_KEY);
 
                 reloadLanguageKeybind = tab.AddKeyButton(LocalyssationConfig.configReloadLanguageKeybind);
                 //LangAdjustables.RegisterText(reloadLanguageKeybind.Label, RELOAD_LANGUAGE_KEYBIND);
@@ -278,10 +282,10 @@ namespace Localyssation.Util
 
             SetupTranslatorModeElements();
 
+
             OnTranslatorModeChanged(LocalyssationConfig.TranslatorMode);
             Localyssation.instance.OnLanguageChanged += this.OnLanguageChanged;
             OnLanguageChange();
-
         }
 
         private static void ChangeAtlyssSettingsElementsEnabled<T>(T uiElement, bool enabled)

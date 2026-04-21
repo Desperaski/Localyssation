@@ -18,8 +18,8 @@ namespace Localyssation
                     .ToArray();
                 }
                 internal static void Init() { }
-                public static readonly string HEADER_GAME_EFFECT_SETTINGS
-                    = Create("SETTINGS_VIDEO_HEADER_GAME_EFFECT_SETTINGS", "Display Sensitive Settings");
+                public static readonly string HEADER_ACCESSIBILITY_SETTINGS
+                    = Create("SETTINGS_VIDEO_HEADER_ACCESSIBILITY_SETTINGS", "Accesibility Settings");
                 public static readonly string CELL_PROPORTIONS_TOGGLE
                     = Create("SETTINGS_VIDEO_CELL_PROPORTIONS_TOGGLE", "Limit Player Character Proportions");
                 public static readonly string CELL_JIGGLE_BONES_TOGGLE
