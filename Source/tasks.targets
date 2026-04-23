@@ -1,7 +1,7 @@
 ﻿<!-- tasks.targets -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup Label="Output">
-		<ZipOutputFileName>$(AssemblyName)-NumAni-v$(ZipFileVersion).zip</ZipOutputFileName>
+		<ZipOutputFileName>$(AssemblyName)-Desperaski-v$(ZipFileVersion).zip</ZipOutputFileName>
 		<ZipOutputPath>$(MSBuildProjectDirectory)/../dist/</ZipOutputPath>
 	</PropertyGroup>
 
@@ -60,7 +60,7 @@ File.WriteAllText(FilePath, content);
 
 	<Target Name="CopyResources" AfterTargets="PostBuildEvent">
 		<ItemGroup>
-			<FilesToCopy Include="$(ProjectDir)..\CHANGELOG.md" />
+			<!-- <FilesToCopy Include="$(ProjectDir)..\CHANGELOG.md" /> -->
 			<FilesToCopy Include="$(ProjectDir)..\unifont.fontbundle" />
 			<FilesToCopy Include="$(ProjectDir)..\icon.png" />
 			<FilesToCopy Include="$(ProjectDir)..\LICENSE" />

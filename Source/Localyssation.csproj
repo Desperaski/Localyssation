@@ -15,7 +15,7 @@
     <ATLYSS_BEPINEX_PLUGINS>$(ATLYSS)\BepInEx\plugins</ATLYSS_BEPINEX_PLUGINS>
 
     <TARGET_ATLYSS_VERSION>12026.a3</TARGET_ATLYSS_VERSION>
-    <VersionPrefix>2.4.0</VersionPrefix>
+    <VersionPrefix>2.4.2</VersionPrefix>
 
     <VersionSuffix>$(TARGET_ATLYSS_VERSION)</VersionSuffix>
     <Version>$(VersionPrefix)</Version>
