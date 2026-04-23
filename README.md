@@ -28,6 +28,7 @@ Currently listed translation patch(es):
 |  한국어  | [KR_Kemonoz](https://thunderstore.io/c/atlyss/p/KR_Kemonoz/) | [AtlyssKr](https://thunderstore.io/c/atlyss/p/KR_Kemonoz/AtlyssKr/) |
 | Brasileiro |[Guachenim](https://thunderstore.io/c/atlyss/p/Guachenim/)|[Thunder Store](https://thunderstore.io/c/atlyss/p/Guachenim/Ordem_e_Atlyss_a_Braziliant_PTBR_Translation/)|
 | 日本語 | [gatia](https://gatia.kage-tora.com/index.html) | [すみっこモノづくり](https://gatia.kage-tora.com/atlyss_jp.html) |
+| Русский |[Fel1n, Desperaski]|[Github](https://github.com/Desperaski/LocalyssationRUS)|
 
 ## How to use
 
