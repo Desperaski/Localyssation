@@ -14,6 +14,10 @@ namespace Localyssation.Patches.ReplaceText
 {
     internal static partial class RTReplacer
     {
+        private static ScriptableQuest cachedQuest;
+        private static QuestMenuCell cachedQuestCell;
+        private static List<QuestTrackElement> cachedQuestTrackElements = new List<QuestTrackElement>();
+
         [HarmonyPatch(typeof(QuestMenuCell), nameof(QuestMenuCell.Cell_OnAwake))]
         [HarmonyPostfix]
         public static void QuestMenu_Cell_OnAwake_Postfix(QuestMenuCell __instance)
@@ -108,7 +112,10 @@ namespace Localyssation.Patches.ReplaceText
         public static void QuestMenuCell_Select_QuestSlot(QuestMenuCell __instance, ScriptableQuest _scriptQuest)
         {
             var key = KeyUtil.GetForAsset(_scriptQuest);
- 
+
+            cachedQuest = _scriptQuest;
+            cachedQuestCell = __instance;
+
             __instance._questHeaderText.text = Localyssation.GetString($"{key}_NAME", __instance._questHeaderText.text, __instance._questHeaderText.fontSize)
                 + " " + string.Format(
                     Localyssation.GetString("FORMAT_QUEST_REQUIRED_LEVEL", fontSize: __instance._questHeaderText.fontSize),
@@ -136,7 +143,30 @@ namespace Localyssation.Patches.ReplaceText
             var objectiveItemText = FindGameObjectTextChild(__instance._objectiveItemPanel, "_text_objectiveItemHeader");
             objectiveItemText.text = Localyssation.GetString("QUEST_MENU_CELL_OBJECTIVE_ITEM_HEADER", objectiveItemText.text, objectiveItemText.fontSize);
         }
-        
+
+        public static void RefreshQuestInfo()
+        {
+            if (cachedQuestCell != null && cachedQuest != null)
+            {
+                cachedQuestCell.Apply_QuestInfo(cachedQuest);
+            }
+        }
+
+        public static void RefreshQuestTrack()
+        {
+            for (int i = cachedQuestTrackElements.Count - 1; i >= 0; i--)
+            {
+                if (cachedQuestTrackElements[i] != null && cachedQuestTrackElements[i]._scriptQuest != null)
+                {
+                    cachedQuestTrackElements[i].Update_QuestTrackElement();
+                }
+                else
+                {
+                    cachedQuestTrackElements.RemoveAt(i);
+                }
+            }
+        }
+
         private static Text FindGameObjectTextChild(GameObject obj, String componentName)
         { 
             Transform t = obj.transform.Find(componentName);
@@ -218,6 +248,9 @@ namespace Localyssation.Patches.ReplaceText
         [HarmonyPostfix]
         public static void QuestTrackElement_Handle_QuestTrackInfo(QuestTrackElement __instance)
         {
+            if (!cachedQuestTrackElements.Contains(__instance))
+                cachedQuestTrackElements.Add(__instance);
+
             var quest = __instance._scriptQuest;
             var key = KeyUtil.GetForAsset(quest);
             if (!string.IsNullOrEmpty(quest._questName))

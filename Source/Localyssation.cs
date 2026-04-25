@@ -102,6 +102,8 @@ namespace Localyssation
                 {
                     LocalyssationConfig.ShowTranslationKeyEnabled = !LocalyssationConfig.ShowTranslationKeyEnabled;
                     CallOnLanguageChanged(LanguageManager.CurrentLanguage);
+                    RTReplacer.RefreshQuestInfo();
+                    RTReplacer.RefreshQuestTrack();
                 }
             }
         }
