@@ -28,6 +28,8 @@ namespace Localyssation
                 = Create("FORMAT_QUEST_MENU_CELL_REWARD_CURRENCY", "{0} Crowns");
             public static readonly string MENU_CELL_SLOT_EMPTY
                 = Create("QUEST_MENU_CELL_SLOT_EMPTY", "Empty Slot");
+            public static readonly string HEADER_QUEST_SELECTION
+                = Create("QUEST_SELECTION_HEADER", "Quest Selection");
             public static readonly string SELECTION_MANAGER_ACCEPT_BUTTON_ACCEPT
                 = Create("QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_ACCEPT", "Accept Quest");
             public static readonly string SELECTION_MANAGER_ACCEPT_BUTTON_LOCKED

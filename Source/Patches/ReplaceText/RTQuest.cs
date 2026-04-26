@@ -210,14 +210,18 @@ namespace Localyssation.Patches.ReplaceText
             }
         }
 
-        [HarmonyPatch(typeof(QuestSelectionManager), nameof(QuestSelectionManager.Select_QuestEntry))]
-        [HarmonyTranspiler]
-        public static IEnumerable<CodeInstruction> QuestSelectionManager_Select_QuestEntry_Transpiler(IEnumerable<CodeInstruction> instructions)
+        [HarmonyPatch(typeof(QuestSelectionManager), nameof(QuestSelectionManager.Handle_QuestSelector))]
+        [HarmonyPostfix]
+        public static void QuestSelectionManager_Handle_QuestSelector_Postfix(QuestSelectionManager __instance)
         {
-            return RTUtil.SimpleStringReplaceTranspiler(instructions, new Dictionary<string, string>() {
-                { "Accept Quest", "QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_ACCEPT" },
-                { "Quest Locked", "QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_LOCKED" },
-            });
+            __instance._questSelectionHeader.text = Localyssation.GetString("QUEST_SELECTION_HEADER", __instance._questSelectionHeader.text, __instance._questSelectionHeader.fontSize);
+
+            __instance._questAcceptButtonText.text = __instance._questAcceptButtonText.text
+                .Replace("Accept Quest", Localyssation.GetString("QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_ACCEPT"))
+                .Replace("Quest Locked", Localyssation.GetString("QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_LOCKED"))
+                .Replace("Complete Quest", Localyssation.GetString("QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_TURN_IN"))
+                .Replace("Quest Incomplete", Localyssation.GetString("QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_INCOMPLETE"))
+                .Replace("Select a Quest", Localyssation.GetString("QUEST_SELECTION_MANAGER_QUEST_ACCEPT_BUTTON_UNSELECTED"));
         }
 
         internal static string GetCreepKillRequirementText(ScriptableCreep creep, int requirement, int fontSize = -1)
