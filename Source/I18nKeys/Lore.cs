@@ -35,6 +35,10 @@ namespace Localyssation
                 = Create(nameof(INTERACT_OPEN), "OPEN");
             public static readonly string INTERACT_PICK_UP
                 = Create(nameof(INTERACT_PICK_UP), "PICK UP");
+            public static readonly string INTERACT_FISH
+                = Create(nameof(INTERACT_FISH), "FISH");
+            public static readonly string INTERACT_CANCEL
+                = Create(nameof(INTERACT_CANCEL), "CANCEL");
 
             public static readonly string WORLDPORTAL_SELECT_WAYPOINT
                 = Create(nameof(WORLDPORTAL_SELECT_WAYPOINT), "- Select Waypoint -");

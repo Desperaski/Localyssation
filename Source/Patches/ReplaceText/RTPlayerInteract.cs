@@ -67,6 +67,8 @@ namespace Localyssation.Patches.ReplaceText
         public static IEnumerable<CodeInstruction> PlayerInteract_General__Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             return RTUtil.SimpleStringReplaceTranspiler(instructions, new[] {
+                I18nKeys.Lore.INTERACT_CANCEL,
+                I18nKeys.Lore.INTERACT_FISH,
                 I18nKeys.Lore.INTERACT_REEL,
                 I18nKeys.Lore.INTERACT_REVIVE,
                 I18nKeys.Lore.INTERACT_INTERACT,
@@ -75,6 +77,18 @@ namespace Localyssation.Patches.ReplaceText
                 I18nKeys.Lore.INTERACT_OPEN,
                 I18nKeys.Lore.INTERACT_PICK_UP
             }, supressNotfoundWarnings: true);
+        }
+
+        [HarmonyPatch(typeof(PlayerInteract), nameof(PlayerInteract.InteractQueue_ResourceEntity))]
+        [HarmonyPrefix]
+        public static void PlayerInteract_InteractQueue_ResourceEntity_Prefix(PlayerInteract __instance, ResourceEntity _foundResourceEntity)
+        {
+            var tag = _foundResourceEntity._scriptableProfession._interactionTag;
+            if (!string.IsNullOrEmpty(tag))
+            {
+                var key = "INTERACT_" + KeyUtil.Normalize(tag);
+                _foundResourceEntity._scriptableProfession._interactionTag = Localyssation.GetString(key, tag);
+            }
         }
 
     }
