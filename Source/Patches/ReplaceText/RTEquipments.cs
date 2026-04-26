@@ -187,7 +187,8 @@ namespace Localyssation.Patches.ReplaceText
                     }
                 }
             }
-            __instance._compareDisplayText.text = __instance._compareDisplayText.text.Replace("Compare", Localyssation.GetString(I18nKeys.Equipment.COMPARE));
+            __instance._compareDisplayText.text = __instance._compareDisplayText.text
+                .Replace("Compare Gear", Localyssation.GetString(I18nKeys.Equipment.COMPARE));
         }
 
         [HarmonyPatch(typeof(EquipToolTip), nameof(EquipToolTip.Apply_EquipStats))]

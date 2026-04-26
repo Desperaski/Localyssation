@@ -58,8 +58,19 @@ namespace Localyssation
                 = CreateEnumKeys<SkillControlType>();
             public static readonly IDictionary<TranslationKey, string> COMBAT_COLLIDER_TYPE
                 = CreateEnumKeys<CombatColliderType>();
+
+            private static readonly IDictionary<ItemType, string> __ITEM_TYPE_VALUES = new Dictionary<ItemType, string>()
+            {
+                { ItemType.GEAR, "Equipment" },
+                { ItemType.CONSUMABLE, "Consumables" },
+                { ItemType.TRADE, "Trade Items" }
+            };
             public static readonly IDictionary<TranslationKey, string> ITEM_TYPE
-                = CreateEnumKeys<ItemType>();
+                = __ITEM_TYPE_VALUES.ToDictionary(
+                    kv => Create(KeyUtil.GetForAsset(kv.Key).ToString(), kv.Value),
+                    kv => kv.Value
+                );
+
             public static readonly IDictionary<TranslationKey, string> ZONE_TYPE
                 = CreateEnumKeys<ZoneType>();
             public static readonly IDictionary<TranslationKey, string> SKILL_TOOLTIP_REQUIREMENT

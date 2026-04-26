@@ -57,7 +57,7 @@ namespace Localyssation
                 = Create("FORMAT_EQUIP_STATS_WEAPON_TRASMUTE_TYPE", "Damage Transmute: {0}");
 
             public static readonly string COMPARE
-                = Create("EQUIP_TOOLTIP_COMPARE", "Compare");
+                = Create("EQUIP_TOOLTIP_COMPARE", "Compare Gear");
 
 
 
