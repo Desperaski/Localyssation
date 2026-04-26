@@ -75,3 +75,4 @@ Also, this mod can't help with the texts inside pictures. Try texture swapping i
 - Originally created by [TheMysticSword](https://github.com/TheMysticSword/Localyssation),
 - then forked and maintained by [TowardtheStars](https://github.com/TowardtheStars) as part of the CHS translation project by team **Sally's Workshop**(莎莉小店),
 - then further forked and maintained by [numanicloud](https://github.com/numanicloud).
+- then forked and maintained by [Desperaski](https://github.com/Desperaski), someone nowhere near as skilled as the gentlemen above, but one stubborn-ass perfectionist and fan of the game.
