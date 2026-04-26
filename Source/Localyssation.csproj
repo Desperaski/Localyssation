@@ -4,7 +4,7 @@
     <!-- Edit here for building on your own -->
 
     <!-- Atlyss game folder -->
-    <ATLYSS>D:\SteamLibrary\steamapps\common\ATLYSS</ATLYSS>
+    <ATLYSS>G:\SteamLibrary\steamapps\common\ATLYSS</ATLYSS>
     <ATLYSS_MANAGED>$(ATLYSS)\ATLYSS_Data\Managed</ATLYSS_MANAGED>
 
     <!-- Only used here for changing profiles -->
@@ -15,7 +15,7 @@
     <ATLYSS_BEPINEX_PLUGINS>$(ATLYSS)\BepInEx\plugins</ATLYSS_BEPINEX_PLUGINS>
 
     <TARGET_ATLYSS_VERSION>12026.a3</TARGET_ATLYSS_VERSION>
-    <VersionPrefix>2.4.2</VersionPrefix>
+    <VersionPrefix>2.4.3</VersionPrefix>
 
     <VersionSuffix>$(TARGET_ATLYSS_VERSION)</VersionSuffix>
     <Version>$(VersionPrefix)</Version>
@@ -25,7 +25,7 @@
   <!-- Mod assemblies. -->
   <ItemGroup>
     <Reference Include="EasySettings">
-      <HintPath>$(ATLYSS_BEPINEX_PLUGINS)\EasySettings.dll</HintPath>
+      <HintPath>$(ATLYSS_BEPINEX_PLUGINS)\EasySettings\EasySettings.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

@@ -1,4 +1,6 @@
 ﻿
+using Localyssation.Util;
+
 namespace Localyssation
 {
     internal static partial class I18nKeys
@@ -32,6 +34,15 @@ namespace Localyssation
                 = Create("CHARACTER_CREATION_CUSTOMIZER_COLOR_HAIR_HEADER", "Hair");
             public static readonly string CUSTOMIZER_COLOR_HAIR_LOCK_COLOR
                 = Create("CHARACTER_CREATION_CUSTOMIZER_COLOR_HAIR_LOCK_COLOR", "Lock Color");
+
+            public static readonly string CUSTOMIZER_COLOR_HUE
+                = Create("CHARACTER_CREATION_CUSTOMIZER_COLOR_HUE", "Hue");
+            public static readonly string CUSTOMIZER_COLOR_BRIGHTNESS
+                = Create("CHARACTER_CREATION_CUSTOMIZER_COLOR_BRIGHTNESS", "Brightness");
+            public static readonly string CUSTOMIZER_COLOR_CONTRAST
+                = Create("CHARACTER_CREATION_CUSTOMIZER_COLOR_CONTRAST", "Contrast");
+            public static readonly string CUSTOMIZER_COLOR_SATURATION
+                = Create("CHARACTER_CREATION_CUSTOMIZER_COLOR_SATURATION", "Saturation");
 
             public static readonly string CUSTOMIZER_HEADER_HEAD
                 = Create("CHARACTER_CREATION_CUSTOMIZER_HEADER_HEAD", "Head");
@@ -79,6 +90,8 @@ namespace Localyssation
                 = Create("CHARACTER_CREATION_CUSTOMIZER_TRAIT_GEAR_DYE", "Dye");
             public static readonly string CUSTOMIZER_TRAIT_ATTRIBUTES
                 = Create("CHARACTER_CREATION_CUSTOMIZER_TRAIT_ATTRIBUTES", "Attributes");
+            public static readonly string CUSTOMIZER_TRAIT_UNSPENT_POINTS
+                = Create("CHARACTER_CREATION_CUSTOMIZER_TRAIT_UNSPENT_POINTS", "Unspent Points");
             public static readonly string CUSTOMIZER_TRAIT_RESET_ATTRIBUTE_POINTS
                 = Create("CHARACTER_CREATION_CUSTOMIZER_TRAIT_RESET_ATTRIBUTE_POINTS", "Reset Points");
 

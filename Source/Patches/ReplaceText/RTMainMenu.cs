@@ -101,13 +101,13 @@ namespace Localyssation.Patches.ReplaceText
                     RTUtil.RemapAllTextUnderObject(obj_Canvas_characterCreation.gameObject, new Dictionary<string, string>()
                     {
                         { "_text_header", "CHARACTER_CREATION_HEADER" },
-                        { "_header_raceSelect", "CHARACTER_CREATION_HEADER" },
+                        { "_header_raceSelect", "CHARACTER_CREATION_HEADER_RACE_NAME" },
                         { "_header_initialSkill", "CHARACTER_CREATION_RACE_DESCRIPTOR_HEADER_INITIAL_SKILL" },
                         { "_button_createCharacter", "CHARACTER_CREATION_BUTTON_CREATE_CHARACTER" },
                         { "_button_return", "CHARACTER_CREATION_BUTTON_RETURN" },
                     });
 
-                    RTUtil.RemapAllInputPlaceholderTextUnderObject(obj_Canvas_characterSelect.gameObject, new Dictionary<string, string>()
+                    RTUtil.RemapAllInputPlaceholderTextUnderObject(obj_Canvas_characterCreation.gameObject, new Dictionary<string, string>()
                     {
                         { "_input_characterName", "CHARACTER_CREATION_CHARACTER_NAME_PLACEHOLDER_TEXT" }
                     });
@@ -124,8 +124,28 @@ namespace Localyssation.Patches.ReplaceText
                             { "_characterButtonSelector", "CHARACTER_CREATION_CUSTOMIZER_COLOR_BODY_TEXTURE" },
                             { "_text_hairColor", "CHARACTER_CREATION_CUSTOMIZER_COLOR_HAIR_HEADER" },
                             { "Toggle_lockColor", "CHARACTER_CREATION_CUSTOMIZER_COLOR_HAIR_LOCK_COLOR" },
-                            //{ "_button_defaultColor", "CHARACTER_CREATION_BUTTON_SET_TO_DEFAULTS" },
                         });
+
+
+                        RTUtil.RemapChildTextsByPath(customizer_color, new Dictionary<string, string>
+                        {
+                            { "_dolly_bodyColor/_characterSlider_bodyHue/Text (Legacy)", "CHARACTER_CREATION_CUSTOMIZER_COLOR_HUE" },
+                            { "_dolly_bodyColor/_characterSlider_bodyBrightness/Text (Legacy)_01", "CHARACTER_CREATION_CUSTOMIZER_COLOR_BRIGHTNESS" },
+                            { "_dolly_bodyColor/_characterSlider_bodyContrast/Text (Legacy)_02", "CHARACTER_CREATION_CUSTOMIZER_COLOR_CONTRAST" },
+                            { "_dolly_bodyColor/_characterSlider_bodySaturation/Text (Legacy)_03", "CHARACTER_CREATION_CUSTOMIZER_COLOR_SATURATION" },
+
+                            { "_dolly_bodyColor/_characterSlider_hairHue/Text (Legacy)_01", "CHARACTER_CREATION_CUSTOMIZER_COLOR_HUE" },
+                            { "_dolly_bodyColor/_characterSlider_hairBrightness/Text (Legacy)_02", "CHARACTER_CREATION_CUSTOMIZER_COLOR_BRIGHTNESS" },
+                            { "_dolly_bodyColor/_characterSlider_hairContrast/Text (Legacy)_03", "CHARACTER_CREATION_CUSTOMIZER_COLOR_CONTRAST" },
+                            { "_dolly_bodyColor/_characterSlider_hairSaturation/Text (Legacy)_04", "CHARACTER_CREATION_CUSTOMIZER_COLOR_SATURATION" },
+                            
+                            { "_dolly_bodyColor/_characterSlider_miscHue/Text (Legacy)_05", "CHARACTER_CREATION_CUSTOMIZER_COLOR_HUE" },
+                            { "_dolly_bodyColor/_characterSlider_miscBrightness/Text (Legacy)_06", "CHARACTER_CREATION_CUSTOMIZER_COLOR_BRIGHTNESS" },
+                            { "_dolly_bodyColor/_characterSlider_miscContrast/Text (Legacy)_07", "CHARACTER_CREATION_CUSTOMIZER_COLOR_CONTRAST" },
+                            { "_dolly_bodyColor/_characterSlider_miscSaturation/Text (Legacy)_08", "CHARACTER_CREATION_CUSTOMIZER_COLOR_SATURATION" },
+
+                        });
+
                     if (customizer_head)
                         RTUtil.RemapAllTextUnderObject(customizer_head.gameObject, new Dictionary<string, string>()
                         {
@@ -164,6 +184,7 @@ namespace Localyssation.Patches.ReplaceText
                             { "_text_mindAttribute", "STAT_ATTRIBUTE_MIND_NAME" },
                             { "_text_dexterityAttribute", "STAT_ATTRIBUTE_DEXTERITY_NAME" },
                             { "_text_vitalityAttribute", "STAT_ATTRIBUTE_VITALITY_NAME" },
+                            { "_text_atbHeader", "CHARACTER_CREATION_CUSTOMIZER_TRAIT_UNSPENT_POINTS" },
                             { "_button_resetAtbPoints", "CHARACTER_CREATION_CUSTOMIZER_TRAIT_RESET_ATTRIBUTE_POINTS" },
                         });
                 }
