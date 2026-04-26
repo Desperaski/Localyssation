@@ -84,6 +84,8 @@ namespace Localyssation
                 {
                     LanguageManager.CurrentLanguage.LoadFromFileSystem(true);
                     CallOnLanguageChanged(LanguageManager.CurrentLanguage);
+                    RTReplacer.RefreshQuestInfo();
+                    RTReplacer.RefreshQuestTrack();
                 }
 
                 if (Input.GetKeyDown(LocalyssationConfig.ReloadFontBundlesKeybind))

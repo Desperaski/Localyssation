@@ -20,6 +20,8 @@ namespace Localyssation
                 = Create("FORMAT_QUEST_MENU_CELL_QUEST_LOG_COUNTER", "Quest Log: ({0} / {1})");
             public static readonly string FORMAT_MENU_CELL_FINISHED_COUNTER
                 = Create("FORMAT_QUEST_MENU_CELL_FINISHED_QUEST_COUNTER", "Completed Quests: {0}");
+            public static readonly string MENU_CELL_REWARD_HEADER
+                = Create("QUEST_MENU_CELL_REWARD_HEADER", "Rewards:");
             public static readonly string FORMAT_MENU_CELL_REWARD_EXP
                 = Create("FORMAT_QUEST_MENU_CELL_REWARD_EXP", "{0} exp");
             public static readonly string FORMAT_MENU_CELL_REWARD_CURRENCY

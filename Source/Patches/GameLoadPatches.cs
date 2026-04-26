@@ -51,7 +51,8 @@ namespace Localyssation.Patches
                 LanguageManager.RegisterKey(key.Name, quest._questName);
                 LanguageManager.RegisterKey(key.Description, quest._questDescription);
                 LanguageManager.RegisterKey(key.CompleteReturnMessage, quest._questCompleteReturnMessage);
-                
+                LanguageManager.RegisterKey(key.CompleteReturnMessageTrack, quest._questCompleteReturnMessage);
+
                 foreach (var questTriggerRequirement in quest._questObjective._questTriggerRequirements)
                 {
                     LanguageManager.RegisterKey($"{KeyUtil.GetForAsset(questTriggerRequirement)}_PREFIX", questTriggerRequirement._prefix);

@@ -296,13 +296,25 @@ namespace Localyssation.Patches.ReplaceText
             for (var i = 0; i < scriptQuestQuestObjective._questTriggerRequirements.Length; i++)
             {
                 var questTriggerRequirement = scriptQuestQuestObjective._questTriggerRequirements[i];
-                var prefix = Localyssation.GetString("QUEST_TRIGGER_REQUIREMENT_PREFIX_" + KeyUtil.Normalize(questTriggerRequirement._prefix), questTriggerRequirement._prefix, fontSize);
-                var suffix = Localyssation.GetString("QUEST_TRIGGER_REQUIREMENT_SUFFIX_" + KeyUtil.Normalize(questTriggerRequirement._suffix), questTriggerRequirement._suffix, fontSize);
+
+                //var prefix = Localyssation.GetString("QUEST_TRIGGER_REQUIREMENT_PREFIX_" + KeyUtil.Normalize(questTriggerRequirement._prefix), questTriggerRequirement._prefix, fontSize);
+                //var suffix = Localyssation.GetString("QUEST_TRIGGER_REQUIREMENT_SUFFIX_" + KeyUtil.Normalize(questTriggerRequirement._suffix), questTriggerRequirement._suffix, fontSize);
+
+                var prefix = Localyssation.GetString($"{KeyUtil.GetForAsset(questTriggerRequirement)}_PREFIX", questTriggerRequirement._prefix, fontSize);
+                var suffix = Localyssation.GetString($"{KeyUtil.GetForAsset(questTriggerRequirement)}_SUFFIX", questTriggerRequirement._suffix, fontSize);
+
                 ReplaceTrackElementText($"{prefix} {suffix}",
                     questProgressData._triggerProgressValues[i], 
                     questTriggerRequirement._triggerEmitsNeeded);
             }
-
+            if (quest._questCompleteReturnMessage != null && quest._questCompleteReturnMessage.Length > 0)
+            {
+                var completeKey = $"{key}_COMPLETE_RETURN_MESSAGE_TRACK";
+                var lastIndex = trackElementText.Length - 1;
+                trackElementText[lastIndex] = trackElementText[lastIndex].Replace(
+                    quest._questCompleteReturnMessage,
+                    Localyssation.GetString(completeKey, quest._questCompleteReturnMessage, fontSize));
+            }
             __instance._trackElementText.text = string.Join("\n", trackElementText);
         }
 

@@ -57,6 +57,8 @@ namespace Localyssation.Util
         public QuestTranslationKey(string _key) : base(_key) { }
 
         public TranslationKey CompleteReturnMessage { get => new TranslationKey(key + "_COMPLETE_RETURN_MESSAGE"); }
+
+        public TranslationKey CompleteReturnMessageTrack { get => new TranslationKey(key + "_COMPLETE_RETURN_MESSAGE_TRACK"); }
     }
 
     public class NetTriggerTranslationKey : TranslationKey
