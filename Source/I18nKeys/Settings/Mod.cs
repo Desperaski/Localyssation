@@ -26,7 +26,6 @@ namespace Localyssation
                     return Create(KeyUtil.Normalize(configEntry.Key), configEntry.Key);
                 }
 
-                // TODO: Этот заголовок при заходе в игру отображается непереведённым. Переводится только по нажатию кнопки обновить язык. Хз как это фиксить
                 public static readonly TranslationKey HEADER_GENERAL
                     = CreateSectionHeader("HEADER_GENERAL", "General");
                 public static readonly TranslationKey LANGUAGE

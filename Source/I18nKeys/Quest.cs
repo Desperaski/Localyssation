@@ -22,6 +22,8 @@ namespace Localyssation
                 = Create("FORMAT_QUEST_MENU_CELL_FINISHED_QUEST_COUNTER", "Completed Quests: {0}");
             public static readonly string MENU_CELL_REWARD_HEADER
                 = Create("QUEST_MENU_CELL_REWARD_HEADER", "Rewards:");
+            public static readonly string MENU_CELL_OBJECTIVE_ITEM_HEADER
+                = Create("QUEST_MENU_CELL_OBJECTIVE_ITEM_HEADER", "Objective Item:");
             public static readonly string FORMAT_MENU_CELL_REWARD_EXP
                 = Create("FORMAT_QUEST_MENU_CELL_REWARD_EXP", "{0} exp");
             public static readonly string FORMAT_MENU_CELL_REWARD_CURRENCY
@@ -44,6 +46,9 @@ namespace Localyssation
                 = Create("FORMAT_QUEST_PROGRESS", "{0}: ({1} / {2})");
             public static readonly string FORMAT_PROGRESS_CREEPS_KILLED
                 = Create("FORMAT_QUEST_PROGRESS_CREEPS_KILLED", "{0} slain");
+
+            public static readonly string TYPE_CLASS
+                = Create("QUEST_TYPE_CLASS", "Class");
 
             public static readonly TranslationKey RETRIEVED_QUEST_OBJECTIVE_ITEM_FORMAT
                 = Create("QUEST_RETRIEVED_QUEST_OBJECTIVE_ITEM_FORMAT", "Retrieved Quest Objective Item: {0}.");

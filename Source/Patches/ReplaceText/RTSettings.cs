@@ -210,7 +210,7 @@ namespace Localyssation.Patches.ReplaceText
                 { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/_cell_cameraVert/_button_resetCameraVert/Text", "SETTINGS_BUTTON_RESET" },
                 { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_inputSettingsTab/_backdrop/Scroll View_inputTab/Viewport_inputTab/Content_inputTab/_cell_cameraSensitivity/_button_resetCameraSensitivity/Text", "SETTINGS_BUTTON_RESET" },
 
-                // TODO: "General" header only translates after F10 (Reload Language). idk how to fix this
+                //"General" header only translates after F10 (Reload Language). idk how to fix this
                 { "Canvas_SettingsMenu/_dolly_settingsMenu/_dolly_videoSettingsTab(Clone)/_backdrop_videoTab/Scroll View_videoTab/Viewport_videoTab/Content_videoTab/EasySettings TabSelector(Clone)/Label", "SETTINGS_MOD_HEADER_GENERAL" },
             });
         }
