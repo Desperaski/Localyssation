@@ -8,15 +8,6 @@ namespace Localyssation.Patches.ReplaceText
 
     internal static partial class RTReplacer
     {
-        // _button_rerollGamble
-        [HarmonyPatch(typeof(ShopkeepManager), nameof(ShopkeepManager.Awake))]
-        [HarmonyPostfix]
-        public static void ShopkeepManager_Awake_Postfix(ShopkeepManager __instance)
-        {
-            __instance._rerollGambleButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Lore.GAMBLING_SHOP_BUTTON_REROLL);
-        }
-
-
         [HarmonyPatch(typeof(ShopkeepManager), nameof(ShopkeepManager.Handle_ShopkeepUIBehavior))]
         [HarmonyPostfix]
         public static void ShopkeepManager_Handle_ShopkeepUIBehavior_Postfix(ShopkeepManager __instance)
@@ -25,6 +16,16 @@ namespace Localyssation.Patches.ReplaceText
             {
                 __instance._shopkeepHeaderText.text = "- " + Localyssation.GetString(KeyUtil.GetForAsset(__instance._scriptShopkeep) + "_SHOP_NAME") + " -";
                 __instance._shopkeepTabHeaderText.text = Localyssation.GetString(KeyUtil.GetForAsset(__instance._currentShopTab));
+
+                __instance._rerollGambleButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_REROLL);
+
+                __instance._sellQuantityOneButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_SELL_SINGLE);
+                __instance._sellQuantityButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_SELL_QUANTITY);
+                __instance._cancelSellPromptButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_CANCEL_SELL);
+
+                __instance._purchaseButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_PURCHASE_SINGLE);
+                __instance._purchaseQuantityButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_PURCHASE_QUANTITY);
+                __instance._cancelPromptButton.GetComponentInChildren<Text>().text = Localyssation.GetString(I18nKeys.Shop.BUTTON_CANCEL_PURCHASE);
             }
         }
 

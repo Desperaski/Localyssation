@@ -47,8 +47,6 @@ namespace Localyssation
             public static readonly string WORLDPORTAL_TELEPORT
                 = Create(nameof(WORLDPORTAL_TELEPORT), "Teleport");
 
-            public static readonly string GAMBLING_SHOP_BUTTON_REROLL
-                = Create(nameof(GAMBLING_SHOP_BUTTON_REROLL), "Re-roll Stock");
             public static readonly string DUNGEON_PORTAL_ENTER_PARTY
                 = Create(nameof(DUNGEON_PORTAL_ENTER_PARTY), "Join Party");
             public static readonly string DUNGEON_PORTAL_ENTER_LEVELED_FORMAT
