@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Localyssation.Util;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Localyssation.Patches.ReplaceText
 {
@@ -39,7 +40,6 @@ namespace Localyssation.Patches.ReplaceText
             return header + string.Join("\n", consumableDescItems) + ender;
         }
 
-
         // items
         [HarmonyPatch(typeof(ItemToolTip), nameof(ItemToolTip.Apply_ItemStats))]
         [HarmonyPostfix]
@@ -73,7 +73,7 @@ namespace Localyssation.Patches.ReplaceText
                 //{
                 //    __instance._consumableDescription.text = generateConsumableDescString((ScriptableStatusConsumable)__instance._scriptItem);
                 //}
-
+                
                 __instance._toolTipName.text = __instance._toolTipName.text.Replace(__instance._scriptItem._itemName, Localyssation.GetString($"{key}_NAME"));
                 __instance._toolTipDescription.text = __instance._toolTipDescription.text.Replace(__instance._scriptItem._itemDescription, Localyssation.GetString($"{key}_DESCRIPTION"));
                 __instance._toolTipSubName.text = string.Format(
@@ -143,6 +143,30 @@ namespace Localyssation.Patches.ReplaceText
                     }
                     __instance._itemNametagTextMesh.text = str + Localyssation.GetString(KeyUtil.GetForAsset(__instance._itemObject._foundItem) + "_NAME");
                 }
+            }
+        }
+
+        [HarmonyPatch(typeof(ItemToolTip), nameof(ItemToolTip.Awake))]
+        [HarmonyPostfix]
+        public static void ItemToolTip_Awake_Postfix(ItemToolTip __instance)
+        {
+            var rarityText = __instance.transform.Find("_itemToolTipBase/equipToolTip_Interface/_dolly_equipHeader/_text_itemRarity");
+            var existingSpacer = __instance.transform.Find("_itemToolTipBase/equipToolTip_Interface/_dolly_equipHeader/_text_raritySpacer");
+
+            if (rarityText != null && existingSpacer == null)
+            {
+                // Empty separator line
+                // A hack to prevent the long item name and the rarity line from clipping into each other
+                var spacer = GameObject.Instantiate(rarityText.gameObject, rarityText.parent);
+                spacer.name = "_text_raritySpacer";
+
+                // Clearing text
+                foreach (var text in spacer.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
+                    text.text = " ";
+                foreach (var text in spacer.GetComponentsInChildren<UnityEngine.UI.Text>())
+                    text.text = " ";
+
+                spacer.transform.SetSiblingIndex(rarityText.GetSiblingIndex());
             }
         }
     }
