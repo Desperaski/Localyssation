@@ -24,7 +24,7 @@ namespace Localyssation.Patches.ReplaceText
                 }
 
                 if (cachedStorageHeader != null)
-                    cachedStorageHeader.text = Localyssation.GetString("STORAGE_HEADER_ITEM_STORAGE");
+                    cachedStorageHeader.text = Localyssation.GetString(I18nKeys.Storage.HEADER);
             }
             else
             {
